@@ -43,7 +43,7 @@ public class ButtonJPanel extends JPanel implements ActionListener {
 	public ButtonJPanel(SuperPaintGUI frame) {
 		this.frame = frame;
 		setLayout(new GridBagLayout());
-		setPreferredSize(new Dimension(200, getPreferredSize().height));
+//		setPreferredSize(new Dimension(200, getPreferredSize().height));
 		GridBagConstraints c = new GridBagConstraints();
 		c.fill = GridBagConstraints.HORIZONTAL;
 		
@@ -108,6 +108,7 @@ public class ButtonJPanel extends JPanel implements ActionListener {
 		c.gridy = 4;
 		add(loadFileButton, c);
 		
+		setPreferredSize(getPreferredSize());
 	}
 
 	public void actionPerformed(ActionEvent e) {

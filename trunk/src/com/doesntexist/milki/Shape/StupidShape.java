@@ -14,7 +14,7 @@ import com.doesntexist.milki.ShapeType;
 
 abstract public class StupidShape implements Serializable {
 	private static final long serialVersionUID = 9023598502806960885L;
-	protected ShapeType shapeType;
+	public ShapeType shapeType;
 	public Color color;
 	public Point startPoint, endPoint;
 	public Shape shape;
@@ -56,6 +56,5 @@ abstract public class StupidShape implements Serializable {
 		out.writeObject(color);
 		out.writeObject(startPoint);
 		out.writeObject(endPoint);
-//		out.writeObject(shape);
 	}
 }

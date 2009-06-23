@@ -84,6 +84,7 @@ public class DrawJPanel extends		JPanel
 		if (newShape != null) {
 			newShape.draw(g);
 		}
+		//TODO TEXT RESIZE
 		if (selectedShape != null) {
 			changeSizeRect.draw(g);
 		}
