@@ -11,6 +11,7 @@ public class StupidLine extends StupidShape {
 	public StupidLine(Color color, Point startPoint, Point endPoint) {
 		super(color, startPoint, endPoint);
 		shape = new Line2D.Double(startPoint, endPoint);
+		updateShape();
 		shapeType = ShapeType.LINE;
 	}
 
