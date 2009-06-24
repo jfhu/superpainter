@@ -141,7 +141,6 @@ public class DrawJPanel extends		JPanel
 		switch(shapeType) {
 		case RECTANGLE:
 				newShape = new StupidRectangle(color, startPoint, endPoint);
-	
 			break;
 		case CIRCLE:
 				newShape = new StupidCircle(color, startPoint, endPoint);
@@ -201,7 +200,7 @@ public class DrawJPanel extends		JPanel
 				Point start = new Point(selectedShape.endPoint.x - 10, selectedShape.endPoint.y - 10);
 				Point end = new Point(selectedShape.endPoint.x + 10, selectedShape.endPoint.y + 10);
 				changeSizeRect = new StupidRectangle(Color.black, start, end);				
-			}else {
+			} else {
 				int dx = e.getPoint().x - startPoint.x;
 				int dy = e.getPoint().y - startPoint.y;
 				startPoint = e.getPoint();
@@ -223,6 +222,7 @@ public class DrawJPanel extends		JPanel
 	public void focusLost(FocusEvent e) {
 		String str = ((JTextField) e.getSource()).getText();
 		frame.setMessage(str);
+		endPoint.y = startPoint.y - 20;
 		allShapes.add(new StupidText(color, startPoint, endPoint, str));
 		((JTextField)e.getSource()).setVisible(false);
 		textInputButton.setVisible(false);

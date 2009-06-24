@@ -40,13 +40,13 @@ public class StupidText extends StupidShape {
 				e.printStackTrace();
 			}
 		} else {
-			for (String name : fontFamilies ) {
-				if (name.equals("Courier")) {
-					font = new Font("Courier", Font.PLAIN, 20);
-					break;
-				}
-			}
 			if (font == null) {
+				for (String name : fontFamilies ) {
+					if (name.equals("Courier")) {
+						font = new Font("Courier", Font.PLAIN, 20);
+						break;
+					}
+				}
 				font = new Font(fontFamilies[0], Font.PLAIN, 20);
 			}
 	        g2.setFont(font);
@@ -59,7 +59,7 @@ public class StupidText extends StupidShape {
 
 	@Override
 	public void updateShape() {
-		//TODO
+		font = font.deriveFont(Math.abs((float)(startPoint.y - endPoint.y)));
 	}
 	
 	@Override
