@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 import com.doesntexist.milki.PageElement.*;
+import com.doesntexist.milki.Shape.ShapeType;
 
 /**
  * 
@@ -12,7 +13,7 @@ import com.doesntexist.milki.PageElement.*;
 public class SuperPaintGUI extends JFrame {
 	private static String title = new String("SuperPainter");
 	private static final int width = 1000;
-	private static final int height = 600;
+	private static final int height = 700;
 
 	public StatusBarJPanel statePanel;
 	public ButtonJPanel buttonPanel;

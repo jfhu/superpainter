@@ -1,4 +1,4 @@
-package com.doesntexist.milki;
+package com.doesntexist.milki.util;
 
 import java.io.File;
 

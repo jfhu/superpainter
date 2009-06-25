@@ -26,10 +26,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.text.JTextComponent;
 
-import com.doesntexist.milki.MyFileFilter;
-import com.doesntexist.milki.ShapeType;
 import com.doesntexist.milki.SuperPaintGUI;
 import com.doesntexist.milki.Shape.*;
+import com.doesntexist.milki.util.MyFileFilter;
 
 import java.io.EOFException;
 import java.io.File;
@@ -184,6 +183,7 @@ public class DrawJPanel extends		JPanel
 			newShape.setEndPoint(e.getPoint());
 			allShapes.add(newShape);
 			newShape = null;
+			repaint();
 		}
 	}
 

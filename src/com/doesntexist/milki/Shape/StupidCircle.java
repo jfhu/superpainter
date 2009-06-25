@@ -3,7 +3,6 @@ package com.doesntexist.milki.Shape;
 import java.awt.Color;
 import java.awt.Point;
 import java.awt.geom.Ellipse2D;
-import com.doesntexist.milki.ShapeType;
 
 public class StupidCircle extends StupidShape {
 
