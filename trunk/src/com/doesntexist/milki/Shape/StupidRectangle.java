@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Point;
 import java.awt.geom.Rectangle2D;
 
-import com.doesntexist.milki.ShapeType;
 
 public class StupidRectangle extends StupidShape {
 

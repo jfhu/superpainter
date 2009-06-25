@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-import com.doesntexist.milki.ShapeType;
 
 abstract public class StupidShape implements Serializable {
 	private static final long serialVersionUID = 9023598502806960885L;

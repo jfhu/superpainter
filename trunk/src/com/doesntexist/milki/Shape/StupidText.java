@@ -13,7 +13,6 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-import com.doesntexist.milki.ShapeType;
 
 public class StupidText extends StupidShape {
 	
@@ -54,18 +53,23 @@ public class StupidText extends StupidShape {
 			g2.drawString(text, startPoint.x, startPoint.y + 20);
 			FontMetrics metrics = g2.getFontMetrics(font);
 			size = new Dimension(metrics.stringWidth(text) + 2, metrics.getHeight() + 2);
+//			g2.drawRect((int)startPoint.x, (int) (startPoint.y + 25 - size.getHeight()), (int)size.getWidth(), (int)size.getHeight());
+//			g2.drawRect(startPoint.x, startPoint.y, 10, 10);
 		}
 	}
 
 	@Override
 	public void updateShape() {
-		font = font.deriveFont(Math.abs((float)(startPoint.y - endPoint.y)));
+		if (startPoint.y < endPoint.y) {
+			endPoint.y = startPoint.y;
+		}
+		font = font.deriveFont((float)(startPoint.y - endPoint.y));
 	}
 	
 	@Override
 	public boolean contains(Point p) {
 		Rectangle2D tmp = new Rectangle2D.Double();
-		tmp.setRect(startPoint.x, startPoint.y, size.getWidth(), size.getHeight());
+		tmp.setRect(startPoint.x, startPoint.y + 25 - size.getHeight(), size.getWidth(), size.getHeight());
 		return tmp.contains(p);
 	}
 	

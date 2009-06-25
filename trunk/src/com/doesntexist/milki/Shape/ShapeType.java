@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.doesntexist.milki;
+package com.doesntexist.milki.Shape;
 
 /**
  *
